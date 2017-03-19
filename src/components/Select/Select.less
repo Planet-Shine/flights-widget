@@ -1,0 +1,80 @@
+
+@import '../../styles/palette';
+
+.select {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.select_opened {
+  .select__caption:after {
+    transform: rotate(180deg);
+  }
+  .select__button {
+    border-radius: 2px 2px 0 0;
+  }
+}
+
+
+.select__button {
+  line-height: 30px;
+  min-width: 269px;
+  max-width: 100%;
+  text-align: left;
+  vertical-align: top;
+  box-sizing: border-box;
+  font-size: 15px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  white-space: nowrap;
+  border-radius: 2px;
+  background: @theme-white;
+  border: 1px solid @light-text-color;
+  outline: none;
+
+}
+
+.select__caption {
+  position: relative;
+  display: block;
+  padding: 0 29px 0 15px;
+  &:after {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    width: 11px;
+    height: 6px;
+    margin-top: -3px;
+    content: '';
+    background: url(./opened-status-arrow.svg) 0 0 no-repeat;
+    transition: transform .1s ease-out;
+  }
+}
+
+
+
+.select__list {
+  position: absolute;
+  list-style: none;
+  top: 100%;
+  left:0;
+  width: 100%;
+  background: @theme-white;
+  border-radius: 0 0 2px 2px;
+  box-shadow: 0 2px 3px  @gray;
+}
+
+.select__list-item {
+  cursor: pointer;
+  height: 18px;
+  line-height: 18px;
+  padding: 10px;
+  &:hover {
+    background: @light-gray;
+  }
+}

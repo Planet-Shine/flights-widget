@@ -1,0 +1,46 @@
+@import '../../styles/palette';
+
+.flight-list {
+  margin-top: 20px;
+}
+
+.flight-list__item {
+  display: inline-block;
+  width: 280px;
+  height: 120px;
+  background: @theme-white;
+  border-radius: 2px;
+  border: 1px solid @gray;
+  margin: 0 10px 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 1px 1px @light-gray;
+  line-height: 1.5em;
+}
+
+.flight-list__carrier {
+  display: block;
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+.flight-list__day {
+  text-transform: capitalize;
+}
+
+.flight-list__arrival-time {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.flight-list__departure {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.flight-list__departure-time {
+  font-size: 15px;
+  font-weight: bold;
+}
